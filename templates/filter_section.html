@@ -1,0 +1,6 @@
+<h2>{{ filter.title }}</h2>
+<div class="entries">
+{% for entry in filter.entries %}
+  {% include "entry.html" %}
+{% endfor %}
+</div>

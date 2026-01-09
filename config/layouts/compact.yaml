@@ -1,0 +1,9 @@
+entry:
+  show_title: true
+  show_authors: true
+  show_abstract: false
+  show_journal: false
+  show_pdf_button: true
+
+style:
+  accent_color: "#059669"

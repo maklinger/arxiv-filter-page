@@ -1,0 +1,21 @@
+page:
+  title: "arXiv Watch"
+  timezone: "UTC"
+
+filters:
+  - title: "GRBs"
+    categories: ["astro-ph.HE", "astro-ph.CO"]
+    numberlimit: 250
+    layout: "default"
+    keywords:
+      title: ["GRB", "gamma-ray burst"]
+      abstract: ["GRB", "gamma-ray burst"]
+      authors: ["Piran", "Andrew Taylor"]
+
+  - title: "AGN"
+    categories: ["astro-ph.GA"]
+    numberlimit: 200
+    layout: "compact"
+    keywords:
+      title: ["AGN", "active galactic nucleus"]
+      abstract: ["AGN"]
