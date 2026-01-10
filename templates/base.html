@@ -4,7 +4,24 @@
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href=".././static/css/style.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    defer
+  ></script>
+
 </head>
 <body>
 <header>
@@ -14,5 +31,6 @@
 <main>
   {% include "tabs.html" %}
 </main>
+<script src=".././static/js/tabs.js" defer></script>
 </body>
 </html>

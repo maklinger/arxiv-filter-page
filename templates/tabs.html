@@ -1,12 +1,26 @@
 <div class="tabs">
-{% for filter in filters %}
-<input type="radio" name="tabs" id="tab-{{ loop.index0 }}" {% if loop.first %}checked{% endif %}>
-<label for="tab-{{ loop.index0 }}">{{ filter.title }}</label>
-{% endfor %}
+  <div class="tab-bar">
+    {% for filter in filters %}
+      <button
+        class="tab-button {% if loop.first %}active{% endif %}"
+        data-tab="tab-{{ loop.index0 }}"
+      >
+        <div class="tab-title">{{ filter.title }}</div>
+        <div class="tab-keywords">
+          {{ filter.keywords.title | join(", ") }}
+        </div>
+      </button>
+    {% endfor %}
+  </div>
 
-{% for filter in filters %}
-<section class="tab-content">
-  {% include "filter_section.html" %}
-</section>
-{% endfor %}
+  <div class="tab-contents">
+    {% for filter in filters %}
+      <section
+        id="tab-{{ loop.index0 }}"
+        class="tab-content {% if loop.first %}active{% endif %}"
+      >
+        {% include "filter_section.html" %}
+      </section>
+    {% endfor %}
+  </div>
 </div>

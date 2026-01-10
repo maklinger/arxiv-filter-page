@@ -1,2 +1,103 @@
 body { font-family: system-ui; background: #f6f7fb; }
 .entry { background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 12px; }
+
+.tabs {
+  margin-top: 1rem;
+}
+
+.tab-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab-button {
+  background: #f3f4f6;
+  border: none;
+  border-right: 1px solid #ddd;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.tab-button:hover {
+  background: #e5e7eb;
+}
+
+.tab-button.active {
+  background: white;
+  border-bottom: 2px solid white;
+  font-weight: 600;
+}
+
+.tab-title {
+  font-size: 0.95rem;
+}
+
+.tab-keywords {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.tab-content {
+  display: none;
+  padding: 1rem;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.entry-abstract {
+  cursor: pointer;
+  color: #374151;
+  line-height: 1.4;
+  margin-top: 0;
+
+  /* one-line clamp */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Expanded state */
+.entry-abstract.expanded {
+  white-space: normal;
+  overflow: visible;
+}
+
+.entry-abstract::before {
+  content: " ⌄";
+  color: #9ca3af;
+}
+.entry-abstract.expanded::before {
+  content: " ⌃";
+}
+
+
+.entry-authors {
+  cursor: pointer;
+  color: #374151;
+  line-height: 1.4;
+  margin-top: 0;
+
+  /* one-line clamp */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Expanded state */
+.entry-authors.expanded {
+  white-space: normal;
+  overflow: visible;
+}
+
+/* .entry-abstract::after {
+  content: " ⌄";
+  color: #9ca3af;
+}
+.entry-abstract.expanded::after {
+  content: " ⌃";
+} */
