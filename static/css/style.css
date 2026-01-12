@@ -1,5 +1,11 @@
 body { font-family: system-ui; background: #f6f7fb; }
-.entry { background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 12px; }
+.entry {
+  background: white;
+  padding: 0.65rem 0.75rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+  border-radius: 12px;
+}
 
 .tabs {
   margin-top: 1rem;
@@ -49,11 +55,29 @@ body { font-family: system-ui; background: #f6f7fb; }
   display: block;
 }
 
+.entry-title {
+  margin: 0 0 0.15rem 0;
+  font-size: 1rem;
+  font-style: bold;
+}
+
+.entry-title a {
+  color: #35673b;   
+  text-decoration: none; /* remove underline if desired */
+}
+
+.entry-title a:hover {
+  color: #08240b;   /* darker color on hover */
+  text-decoration: underline; /* optional hover effect */
+}
+
+
 .entry-abstract {
   cursor: pointer;
-  color: #374151;
+  color: #000000;
   line-height: 1.4;
   margin-top: 0;
+  margin-bottom: 0;
 
   /* one-line clamp */
   white-space: nowrap;
@@ -78,9 +102,11 @@ body { font-family: system-ui; background: #f6f7fb; }
 
 .entry-authors {
   cursor: pointer;
-  color: #374151;
+  color: #474849;
   line-height: 1.4;
   margin-top: 0;
+  margin-bottom: 0.1rem;  
+  font-style: italic;
 
   /* one-line clamp */
   white-space: nowrap;
@@ -101,3 +127,21 @@ body { font-family: system-ui; background: #f6f7fb; }
 .entry-abstract.expanded::after {
   content: " ⌃";
 } */
+
+.day-header {
+  position: sticky;
+  top: 0;
+
+  background: #e7e7ea;
+  border-bottom: 1px solid #e5e7eb;
+
+  padding: 0.4rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #374151;
+
+  z-index: 5;
+}
+.day-section {
+  border-top: 1px solid #e5e7eb;
+}
