@@ -1,9 +1,4 @@
-entry:
-  show_title: true
-  show_authors: true
-  show_abstract: false
-  show_journal: false
-  show_pdf_button: true
-
-style:
-  accent_color: "#AAAA00"
+show_title: true
+show_authors: true
+show_abstract: false
+show_journal: false

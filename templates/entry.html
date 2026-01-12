@@ -1,6 +1,28 @@
-<div class="entry">
-<h3><a href="{{ entry.pdf_url }}">{{ entry.title }}</a></h3>
+<!-- <div class="entry">
+<h3 class="entry-title">
+  <a href="{{ entry.pdf_url }}">{{ entry.title }}</a>
+</h3>
 <p class="entry-authors collapsible">{{ entry.authors }}</p>
 <p class="entry-abstract collapsible">{{ entry.abstract }}</p>
-<!-- <a class="pdf" href="{{ entry.pdf_url }}">PDF</a> -->
+</div> -->
+
+
+<div class="entry">
+  {% if filter.layout.show_title %}
+  <h3 class="entry-title">
+    <a href="{{ entry.pdf_url }}" target="_blank">{{ entry.title }}</a>
+  </h3>
+  {% endif %}
+
+  {% if filter.layout.show_authors %}
+  <p class="entry-authors collapsible">{{ entry.authors }}</p>
+  {% endif %}
+
+  {% if filter.layout.show_abstract %}
+  <p class="entry-abstract collapsible">{{ entry.abstract }}</p>
+  {% endif %}
+
+  {% if filter.layout.show_journal %}
+  <p class="entry-journal">{{ entry.journal }}</p>
+  {% endif %}
 </div>

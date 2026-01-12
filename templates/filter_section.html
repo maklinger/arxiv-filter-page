@@ -1,6 +1,12 @@
 <h2>{{ filter.title }}</h2>
-<div class="entries">
-{% for entry in filter.entries %}
-  {% include "entry.html" %}
+{% for day, day_entries in filter.grouped_entries.items() %}
+  <div class="day-section">
+    <div class="day-header">
+      {{ day }}
+    </div>
+
+    {% for entry in day_entries %}
+      {% include "entry.html" %}
+    {% endfor %}
+  </div>
 {% endfor %}
-</div>

@@ -5,17 +5,37 @@ page:
 filters:
   - title: "GRBs"
     categories: ["astro-ph.HE", "astro-ph.CO"]
-    numberlimit: 5
+    numberlimit: 200
     layout: "default"
     keywords:
       title: ["GRB", "gamma-ray burst"]
       abstract: ["GRB", "gamma-ray burst"]
-      authors: ["Piran", "Andrew Taylor"]
 
-  - title: "AGN"
-    categories: ["astro-ph.GA"]
-    numberlimit: 5
-    layout: "compact"
+  - title: "M87"
+    categories: ["astro-ph.HE", "astro-ph.GA", "astro-ph.CO"]
+    layout: "default"
     keywords:
-      title: ["AGN", "active galactic nucleus"]
-      abstract: ["AGN"]
+      title: ["M87"]
+      abstract: ["M87"]
+
+  - title: "VHE GRBs"
+    categories: ["astro-ph.HE"]
+    layout: "default"
+    keywords:
+      title: ["221009", "BOAT", "190114", "190829"]
+      abstract: ["221009", "BOAT", "190114", "190829"]
+
+  # - title: "AGN"
+  #   categories: ["astro-ph.GA"]
+  #   numberlimit: 15
+  #   layout: "compact"
+  #   keywords:
+  #     title: ["AGN", "active galactic nucleus"]
+  #     abstract: ["AGN"]
+
+  - title: "HE last week"
+    categories: ["astro-ph.HE"]
+    days: 7
+    layout: "default"
+    keywords:
+      title: [" "]
