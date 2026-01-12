@@ -4,6 +4,13 @@ from datetime import datetime
 from fetch_arxiv import fetch_entries
 from utils import matches_filter
 import os
+from pathlib import Path
+import shutil
+
+ROOT = Path(__file__).resolve().parent.parent
+SITE_DIR = ROOT / "site"
+STATIC_SRC = ROOT / "static"
+STATIC_DST = SITE_DIR / "static"
 
 env = Environment(loader=FileSystemLoader("templates"))
 
@@ -42,3 +49,9 @@ html = env.get_template("base.html").render(
 os.makedirs("site", exist_ok=True)
 with open("site/index.html", "w") as f:
     f.write(html)
+
+# Copy static assets into site/
+if STATIC_DST.exists():
+    shutil.rmtree(STATIC_DST)
+
+shutil.copytree(STATIC_SRC, STATIC_DST)
