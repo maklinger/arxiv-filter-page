@@ -113,7 +113,8 @@ filters:
         - "Cyg X-3"
         - "LS I"
         - "LS 5039"
-        - "1A 0535"
+        - "V4641"
+        - "GRS1915"
       abstract:
         - "microquasar"
         - "X-ray binary"
