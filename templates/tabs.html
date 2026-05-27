@@ -1,15 +1,25 @@
 <div class="tabs">
   <div class="tab-bar">
     {% for filter in filters %}
-      <button
-        class="tab-button {% if loop.first %}active{% endif %}"
-        data-tab="tab-{{ loop.index0 }}"
-      >
-        <div class="tab-title">{{ filter.title }}</div>
-        <div class="tab-keywords">
-          {{ filter.keywords.title | join(", ") }}
-        </div>
-      </button>
+    <button
+      class="tab-button {% if loop.first %}active{% endif %}"
+      data-tab="tab-{{ loop.index0 }}"
+    >
+      <div class="tab-title">{{ filter.title }}</div>
+      <div class="tab-keywords">
+        {% if filter.keywords is defined and filter.keywords %}
+          {% set all_kws = [] %}
+          {% for field, kws in filter.keywords.items() %}
+            {% for kw in kws %}
+              {% if all_kws.append(kw) %}{% endif %}
+            {% endfor %}
+          {% endfor %}
+          {{ all_kws | unique | join(", ") }}
+        {% else %}
+          {{ filter.categories | join(", ") }}
+        {% endif %}
+      </div>
+    </button>
     {% endfor %}
   </div>
 

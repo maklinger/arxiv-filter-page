@@ -3,39 +3,134 @@ page:
   timezone: "UTC"
 
 filters:
-  - title: "GRBs"
-    categories: ["astro-ph.HE", "astro-ph.CO"]
+
+  - title: "GRB afterglows"
+    categories: ["astro-ph.HE", "astro-ph.CO", "astro-ph.SR", "gr-qc"]
     numberlimit: 200
+    max_results: 200
     layout: "default"
     keywords:
-      title: ["GRB", "gamma-ray burst"]
-      abstract: ["GRB", "gamma-ray burst"]
+      title:
+        - "GRB"
+        - "gamma-ray burst"
+        - "afterglow"
+      abstract:
+        - "GRB"
+        - "gamma-ray burst"
+        - "afterglow"
+
+  - title: "VHE GRBs"
+    categories: ["astro-ph.HE", "astro-ph.CO", "gr-qc"]
+    numberlimit: 100
+    max_results: 200
+    layout: "default"
+    keywords:
+      title:
+        - "221009"
+        - "BOAT"
+        - "190114"
+        - "190829"
+        - "TeV GRB"
+        - "very high energy GRB"
+      abstract:
+        - "221009"
+        - "BOAT"
+        - "190114"
+        - "190829"
+        - "TeV GRB"
+        - "very high energy GRB"
 
   - title: "M87"
     categories: ["astro-ph.HE", "astro-ph.GA", "astro-ph.CO"]
+    numberlimit: 100
+    max_results: 200
     layout: "default"
     keywords:
-      title: ["M87"]
-      abstract: ["M87"]
+      title:
+        - "M87"
+        - "NGC 4486"
+        - "Virgo A"
+        - "3C 274"
+      abstract:
+        - "M87"
+        - "NGC 4486"
+        - "Virgo A"
+        - "3C 274"
 
-  - title: "VHE GRBs"
-    categories: ["astro-ph.HE"]
+  - title: "GRMHD"
+    categories: ["astro-ph.HE", "astro-ph.GA", "gr-qc"]
+    numberlimit: 100
+    max_results: 200
     layout: "default"
     keywords:
-      title: ["221009", "BOAT", "190114", "190829"]
-      abstract: ["221009", "BOAT", "190114", "190829"]
+      title:
+        - "GRMHD"
+        - "general relativistic magnetohydrodynamic"
+        - "general-relativistic magnetohydrodynamic"
+        - "relativistic MHD"
+      abstract:
+        - "GRMHD"
+        - "general relativistic magnetohydrodynamic"
+        - "general-relativistic magnetohydrodynamic"
 
-  # - title: "AGN"
-  #   categories: ["astro-ph.GA"]
-  #   numberlimit: 15
-  #   layout: "compact"
-  #   keywords:
-  #     title: ["AGN", "active galactic nucleus"]
-  #     abstract: ["AGN"]
+  - title: "PIC & acceleration"
+    categories: ["astro-ph.HE", "astro-ph.SR", "physics.plasm-ph"]
+    numberlimit: 100
+    max_results: 200
+    layout: "default"
+    keywords:
+      title:
+        - "particle-in-cell"
+        - "PIC simulation"
+        - "Fermi acceleration"
+        - "diffusive shock acceleration"
+        - "magnetic reconnection"
+        - "shock acceleration"
+        - "non-thermal particle"
+      abstract:
+        - "particle-in-cell"
+        - "PIC simulation"
+        - "Fermi acceleration"
+        - "diffusive shock acceleration"
+        - "magnetic reconnection"
+        - "shock acceleration"
+
+  - title: "Microquasars & XRBs"
+    categories: ["astro-ph.HE", "astro-ph.SR"]
+    numberlimit: 100
+    max_results: 200
+    layout: "default"
+    keywords:
+      title:
+        - "microquasar"
+        - "X-ray binary"
+        - "XRB"
+        - "HMXB"
+        - "LMXB"
+        - "gamma-ray binary"
+        - "SS 433"
+        - "Cyg X-1"
+        - "Cyg X-3"
+        - "LS I"
+        - "LS 5039"
+        - "1A 0535"
+      abstract:
+        - "microquasar"
+        - "X-ray binary"
+        - "gamma-ray binary"
+        - "relativistic jet"
 
   - title: "HE last week"
     categories: ["astro-ph.HE"]
     days: 7
+    max_results: 500
+    layout: "default"
+    # no keywords — returns everything in astro-ph.HE from the past 7 days
+
+  - title: "Me"
+    categories: ["astro-ph.HE"]
     layout: "default"
     keywords:
-      title: [" "]
+      authors:
+        - "Klinger, Marc"
+        - "Marc Klinger-Plaisier"
