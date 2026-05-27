@@ -54,7 +54,7 @@ filters:
       abstract:
         - "M87"
         - "NGC 4486"
-        - "Virgo A"
+        # - "Virgo A" 
         - "3C 274"
 
   - title: "GRMHD"
