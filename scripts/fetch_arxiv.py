@@ -1,7 +1,7 @@
 import feedparser
 from urllib.parse import urlencode
 
-ARXIV_API = "http://export.arxiv.org/api/query"
+ARXIV_API = "https://export.arxiv.org/api/query"
 
 # Maps filter config field names to arXiv API field prefixes
 FIELD_MAP = {
