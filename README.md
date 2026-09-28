@@ -13,3 +13,14 @@ micromamba create -n arxiv-env python feedparser jinja2 pyyaml
 micromamba activate arxiv-env 
 python ./scripts/render.py
 ``` 
+
+
+# For manual, local update:
+
+Go to root path and run
+```
+micromamba activate arxiv-env 
+python ./scripts/render.py
+ghp-import -n -p -f site/
+```
+`-n` adds a `.nojekyll` file, `-p` pushes automatically, `-f` forces.
