@@ -49,11 +49,9 @@ filters:
       title:
         - "M87"
         - "NGC 4486"
-        - "3C 274"
       abstract:
         - "M87"
         - "NGC 4486"
-        - "3C 274"
 
   - title: "GRMHD"
     categories: ["astro-ph.HE", "astro-ph.GA", "gr-qc"]
