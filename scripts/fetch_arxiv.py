@@ -70,4 +70,9 @@ def fetch_entries(categories, keywords=None, max_results=500):
         "max_results": max_results,
     }
     url = f"{ARXIV_API}?{urlencode(params)}"
-    return feedparser.parse(url).entries
+    result = feedparser.parse(url)
+    
+    # Debug output
+    print(f"  [fetch] status={result.get('status')} bozo={result.get('bozo')} entries={len(result.entries)} url={url[:80]}")
+    
+    return result.entries
