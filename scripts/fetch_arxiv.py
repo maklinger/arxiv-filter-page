@@ -81,7 +81,8 @@ def fetch_entries(categories, keywords=None, max_results=500):
         time.sleep(15)
     
     # Debug output
-    print(f"  [fetch] status={result.get('status')} bozo={result.get('bozo')} entries={len(result.entries)} url={url[:80]}")
-    
+    print(f"  [fetch] status={result.get('status')} bozo={result.get('bozo')} entries={len(result.entries)}")
+    print(f"  [url] {url}")
+
     time.sleep(3)
     return result.entries
