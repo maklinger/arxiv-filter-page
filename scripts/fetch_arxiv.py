@@ -1,5 +1,8 @@
 import feedparser
 from urllib.parse import urlencode
+import time
+
+feedparser.USER_AGENT = "arxiv-filter-page/1.0 (https://github.com/maklinger/arxiv-filter-page)"
 
 ARXIV_API = "https://export.arxiv.org/api/query"
 
@@ -75,4 +78,5 @@ def fetch_entries(categories, keywords=None, max_results=500):
     # Debug output
     print(f"  [fetch] status={result.get('status')} bozo={result.get('bozo')} entries={len(result.entries)} url={url[:80]}")
     
+    time.sleep(3)
     return result.entries
