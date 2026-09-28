@@ -73,7 +73,12 @@ def fetch_entries(categories, keywords=None, max_results=500):
         "max_results": max_results,
     }
     url = f"{ARXIV_API}?{urlencode(params)}"
-    result = feedparser.parse(url)
+    for attempt in range(3):
+        result = feedparser.parse(url)
+        if result.get("status") == 200 and result.entries:
+            break
+        print(f"  [retry {attempt+1}] status={result.get('status')}, waiting 15s...")
+        time.sleep(15)
     
     # Debug output
     print(f"  [fetch] status={result.get('status')} bozo={result.get('bozo')} entries={len(result.entries)} url={url[:80]}")
