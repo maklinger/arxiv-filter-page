@@ -52,6 +52,8 @@ for fcfg in config["filters"]:
             keywords=fcfg.get("keywords"),
             max_results=fcfg.get("max_results", 100),
         )
+        
+        print(f"  [render] {fcfg['title']}: fetched {len(entries)}, days={fcfg.get('days')}, numberlimit={fcfg.get('numberlimit')}")
 
         days = fcfg.get("days")
         for e in entries:
